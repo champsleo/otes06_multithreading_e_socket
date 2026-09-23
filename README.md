@@ -30,7 +30,6 @@ independentes:
 
 ```
 Cliente A  ---TCP--->  Servidor  ---TCP--->  Cliente B
-(Alice)                (roteador)             (Bob)
 ```
 
 O servidor mantém uma tabela em memória (`ConcurrentHashMap<String, ClientHandler>`)
