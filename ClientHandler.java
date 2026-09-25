@@ -1,3 +1,6 @@
+//trata cada cliente conectado em uma thread separada; 
+//recebe os comandos e roteia mensagens/arquivos até o destinatário certo.
+
 import java.io.*;
 import java.net.*;
 

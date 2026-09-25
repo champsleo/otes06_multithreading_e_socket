@@ -1,3 +1,6 @@
+//programa que o usuário executa; 
+//conecta ao servidor, envia comandos e exibe/grava o que recebe.
+
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;

@@ -1,3 +1,6 @@
+//inicia o servidor, aceita conexões de clientes 
+//e mantém o log de conexões com IP e data/hora.
+
 import java.io.*;
 import java.net.*;
 import java.text.SimpleDateFormat;
