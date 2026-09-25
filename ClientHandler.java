@@ -80,7 +80,7 @@ public class ClientHandler implements Runnable {
         StringBuilder sb = new StringBuilder();
         for (String u : Server.listUsers()) {
             if (!u.equals(username)) {
-                if (sb.length() > 0) sb.append(",");
+                if (sb.length() > 0) sb.append(", ");
                 sb.append(u);
             }
         }
@@ -133,7 +133,7 @@ public class ClientHandler implements Runnable {
                 int read = in.read(buffer, 0, toRead);
                 if (read == -1) break;
                 destOut.write(buffer, 0, read);
-                remaining -= read;
+                remaining - = read;
             }
             destOut.flush();
         }
@@ -147,7 +147,7 @@ public class ClientHandler implements Runnable {
             int toRead = (int) Math.min(buffer.length, remaining);
             int read = in.read(buffer, 0, toRead);
             if (read == -1) break;
-            remaining -= read;
+            remaining - = read;
         }
     }
 

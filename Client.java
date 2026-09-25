@@ -19,7 +19,7 @@ public class Client {
         out = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
 
         while (true) {
-            System.out.print("Digite seu nome de usuario: ");
+            System.out.print("Nome de usuario: ");
             username = scanner.nextLine().trim();
             out.writeUTF("REGISTER");
             out.writeUTF(username);
@@ -124,13 +124,13 @@ public class Client {
     }
 
     private static void printHelp() {
-        System.out.println("----------------------------------------------------------");
+        System.out.println("- = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - ");
         System.out.println("Comandos disponiveis:");
         System.out.println("  /users                                  - lista usuarios conectados");
         System.out.println("  /send message <destinatario> <mensagem> - envia mensagem de texto");
         System.out.println("  /send file <destinatario> <caminho>     - envia um arquivo");
         System.out.println("  /sair                                   - encerra a conexao");
-        System.out.println("----------------------------------------------------------");
+        System.out.println("- = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - ");
     }
 
     static class ServerListener implements Runnable {
@@ -209,7 +209,7 @@ public class Client {
                     int read = in.read(buffer, 0, toRead);
                     if (read == -1) break;
                     fos.write(buffer, 0, read);
-                    remaining -= read;
+                    remaining - = read;
                 }
             }
             System.out.println("Arquivo recebido de " + sender + ": " + filename
